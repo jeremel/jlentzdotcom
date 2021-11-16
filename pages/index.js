@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Jereme from '../public/jereme-lentz.jpg'
+import Jereme from '/jereme-lentz.jpg'
 
 export default function Home() {
   return (
