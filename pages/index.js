@@ -2,8 +2,29 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Jereme from '../public/jereme-lentz.jpg'
+import { gsap } from 'gsap'
+import { useEffect, useRef } from 'react'
+
+
 
 export default function Home() {
+  // const servRef = useRef();
+  const el = useRef();
+  const q = gsap.utils.selector(el);
+
+  useEffect(() => {
+    gsap.from(q("#services"), {
+      x: -1000,
+      opacity: 0,
+    });
+    gsap.to(q("#services"), {
+      scrollTrigger: "#services",
+      x: 0,
+      stagger: 1.5,
+      duration: 1.5
+    });
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -25,10 +46,10 @@ export default function Home() {
           />
         </div>
 
-        <div className={styles.services}>
-          <h2>Web Developer</h2>
-          <h2><a href="https://www.jeremelentzphotography.com/">Photographer</a></h2>
-          <h2><a href="https://www.jlentzconsulting.com">Consultant</a></h2>
+        <div className={styles.services} ref={el}>
+          <h2 id="services">Web Developer</h2>
+          <h2 id="services"><a href="https://www.jeremelentzphotography.com/">Photographer</a></h2>
+          <h2 id="services"><a href="https://www.jlentzconsulting.com">Consultant</a></h2>
         </div>
       </main>
 
