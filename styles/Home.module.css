@@ -45,6 +45,10 @@
 
 .services h2:hover {
   color: #288d28;
+  text-decoration: underline;
+  text-underline-offset: -1px;
+  text-decoration-thickness: 7%;
+  font-weight: 600;
 }
 
 .about {
@@ -52,13 +56,13 @@
 }
 
 .about p {
-  margin: 2rem 0;
+  margin: 6rem 0 1.5rem 0;
   padding: 0 12rem 0 0;
 }
 
 .about a {
   color: #288d28;
-  transition: color 600ms;
+  transition: color 500ms;
 }
 
 .about a:hover {

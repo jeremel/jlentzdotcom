@@ -21,7 +21,7 @@ export default function Home() {
       scrollTrigger: "#services",
       x: 0,
       stagger: 1.5,
-      duration: 1.5
+      duration: 2
     });
   }, []);
 
@@ -54,7 +54,7 @@ export default function Home() {
       </main>
 
       <section className={styles.about}>
-        <p>Jereme Lentz is a Web Developer, <a href="https://www.jeremelentzphotography.com/">Photographer</a>, and small business <a href="https://www.jlentzconsulting.com">Consultant</a> based out of Egg Harbor City, New Jersey.</p>
+        <p>Jereme Lentz is a freelance Web Developer, <a href="https://www.jeremelentzphotography.com/">Photographer</a>, and small business <a href="https://www.jlentzconsulting.com">Consultant</a> based out of Egg Harbor City, New Jersey.</p>
         <p>Reach out to or follow Jereme on <a href="https://www.instagram.com/jeremel/">Instagram</a>, <a href="https://twitter.com/jereme_l">Twitter</a>, or <a href="https://www.linkedin.com/in/jereme-lentz-03560ab6/">LinkedIn</a>. Or go the old fashioned way and send Jereme an email at <a href="mailto:jerlentz@gmail.com">jerlentz@gmail.com</a></p>
       </section>
 
