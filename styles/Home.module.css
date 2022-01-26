@@ -1,84 +1,3 @@
-.container {
-  padding: 0 2rem;
-}
-
-.main {
-  padding: 1rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.title {
-  margin: 0;
-  padding: 0;
-  line-height: 1.15;
-  font-size: 14rem;
-  font-weight: 400;
-  align-self: flex-end;
-}
-
-.image {
-  width: 55vw;
-  margin: 1rem 0;
-  padding: 0;
-  position: absolute;
-  top: 300px;
-  z-index: 0;
-}
-
-.services {
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-}
-
-.services h2 {
-  font-size: 9rem;
-  padding: 2rem 0 0 0;
-  margin: 0;
-  align-self: flex-end;
-  font-weight: 400;
-  transition: color 600ms;
-}
-
-.services h2:hover {
-  color: #288d28;
-  text-decoration: underline;
-  text-underline-offset: -1px;
-  text-decoration-thickness: 7%;
-  font-weight: 600;
-}
-
-.about {
-  font-size: 3rem;
-}
-
-.about p {
-  margin: 6rem 0 1.5rem 0;
-  padding: 0 12rem 0 0;
-}
-
-.about a {
-  color: #288d28;
-  transition: color 500ms;
-}
-
-.about a:hover {
-  color: #185418;
-  text-decoration: underline;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding: 1rem 0;
-  justify-content: center;
-  align-items: center;
-}
-
 @media (max-width: 1400px) {
   .title {
     font-size: 10rem;
@@ -130,7 +49,5 @@
   }
 }
 
-
 @media (max-width: 600px) {
-  
 }
