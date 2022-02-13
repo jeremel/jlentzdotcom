@@ -5,6 +5,7 @@ import Jereme from "../public/jereme-lentz.jpg";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Container = styled.div`
   padding: 0 2rem;
