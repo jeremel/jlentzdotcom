@@ -78,7 +78,7 @@ export default function Blog() {
         {postData &&
           postData.map((post, index) => (
             <Link
-              href={"/post/" + post.slug.current}
+              href={"/blog/" + post.slug.current}
               passHref
               key={post.slug.current}
             >
