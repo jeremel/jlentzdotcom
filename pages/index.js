@@ -1,54 +1,39 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import Jereme from "../public/jereme-lentz.jpg";
-import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const Container = styled.div`
-  padding: 0 2rem;
+  padding: 0 1rem;
 `;
 
 const Main = styled.main`
   padding: 1rem 0;
-  flex: 1;
   display: flex;
-  flex-direction: column;
-  position: relative;
-
-  h1 {
-    margin: 0;
-    padding: 0;
-    line-height: 1.15;
-    font-size: 14rem;
-    font-weight: 400;
-    align-self: flex-end;
-  }
 
   .imageStyle {
     width: 55vw;
     margin: 1rem 0;
     padding: 0;
-    position: absolute;
+    /* position: absolute; */
     top: 300px;
     z-index: 0;
   }
 
   .services {
-    z-index: 100;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
   }
 
   .services h2 {
-    font-size: 9rem;
-    padding: 2rem 0 0 0;
+    font-size: 5.5rem;
+    padding: 0 0 2rem 0;
     margin: 0;
-    align-self: flex-end;
     font-weight: 400;
-    transition: color 600ms;
+    transition: all 600ms;
   }
 
   .services h2:hover {
@@ -79,35 +64,7 @@ const About = styled.section`
   }
 `;
 
-const Footer = styled.footer`
-   {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 1rem 0;
-    justify-content: center;
-    align-items: center;
-  }
-`;
-
 export default function Home() {
-  // const servRef = useRef();
-  const el = useRef();
-  const q = gsap.utils.selector(el);
-
-  useEffect(() => {
-    gsap.from(q("#services"), {
-      x: -1000,
-      opacity: 0,
-    });
-    gsap.to(q("#services"), {
-      scrollTrigger: "#services",
-      x: 0,
-      stagger: 5,
-      duration: 2,
-    });
-  }, []);
-
   return (
     <Container>
       <Head>
@@ -117,8 +74,6 @@ export default function Home() {
       </Head>
 
       <Main>
-        <h1>Jereme Lentz</h1>
-
         <div className="imageStyle">
           <Image
             src={Jereme}
@@ -127,7 +82,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="services" ref={el}>
+        <div className="services">
           <h2 id="services">Web Developer</h2>
           <h2 id="services">
             <a href="https://www.jeremelentzphotography.com/">Photographer</a>
@@ -157,10 +112,6 @@ export default function Home() {
           <a href="mailto:jerlentz@gmail.com">jerlentz@gmail.com</a>
         </p>
       </About>
-
-      <Footer>
-        <h2>&copy; 2021 Jereme Lentz</h2>
-      </Footer>
     </Container>
   );
 }
