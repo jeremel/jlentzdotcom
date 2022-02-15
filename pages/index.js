@@ -83,13 +83,30 @@ export default function Home() {
         </div>
 
         <div className="services">
-          <h2 id="services">Web Developer</h2>
-          <h2 id="services">
+          <motion.h2
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: -20 }}
+            transition={{ delay: 1.25, duration: 0.25 }}
+            id="services"
+          >
+            Web Developer
+          </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: -20 }}
+            transition={{ delay: 1.75, duration: 0.25 }}
+            id="services"
+          >
             <a href="https://www.jeremelentzphotography.com/">Photographer</a>
-          </h2>
-          <h2 id="services">
+          </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: -20 }}
+            transition={{ delay: 2, duration: 0.25 }}
+            id="services"
+          >
             <a href="https://www.jlentzconsulting.com">Consultant</a>
-          </h2>
+          </motion.h2>
         </div>
       </Main>
 
