@@ -71,7 +71,6 @@ export default function Blog() {
   return (
     <Container>
       <Header>
-        <h1>Jereme Lentz</h1>
         <h2>Blog</h2>
       </Header>
       <BlogPosts>
