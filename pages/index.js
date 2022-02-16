@@ -1,11 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import Jereme from "../public/jereme-lentz.jpg";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const Container = styled.div`
-  padding: 0 1rem;
+  padding: 0 2rem;
 `;
 
 const Main = styled.main`
@@ -13,19 +14,27 @@ const Main = styled.main`
   display: flex;
 
   .imageStyle {
-    width: 55vw;
+    position: relative;
+
+    width: 50%;
     margin: 1rem 0;
     padding: 0;
-    /* position: absolute; */
-    top: 300px;
     z-index: 0;
+
+    img {
+      border-radius: 10px;
+      /* background: #185418; */
+    }
   }
 
   .services {
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    position: relative;
+    z-index: 1;
   }
 
   .services h2 {
@@ -74,52 +83,65 @@ export default function Home() {
       </Head>
 
       <Main>
-        <div className="imageStyle">
+        <motion.div
+          whileHover={{ scale: 1.025 }}
+          whileTap={{ rotate: 180 }}
+          className="imageStyle"
+        >
           <Image
             src={Jereme}
             alt="Jereme Lentz - the man himself"
             placeholder="blur"
           />
-        </div>
+        </motion.div>
 
         <div className="services">
           <motion.h2
             initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.25, duration: 0.25 }}
             id="services"
           >
-            Web Developer
+            Web Development
           </motion.h2>
           <motion.h2
             initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: -20 }}
-            transition={{ delay: 1.75, duration: 0.25 }}
-            id="services"
-          >
-            <a href="https://www.jeremelentzphotography.com/">Photographer</a>
-          </motion.h2>
-          <motion.h2
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2, duration: 0.25 }}
             id="services"
           >
-            <a href="https://www.jlentzconsulting.com">Consultant</a>
+            <a href="https://www.jeremelentzphotography.com/">Photography</a>
+          </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2.75, duration: 0.25 }}
+            id="services"
+          >
+            <a href="https://www.jlentzconsulting.com">Consulting</a>
+          </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 3.5, duration: 0.25 }}
+            id="services"
+          >
+            <Link href="/blog">
+              <a>Blog</a>
+            </Link>
           </motion.h2>
         </div>
       </Main>
 
       <About>
         <p>
-          I am a freelance Web Developer,{" "}
-          <a href="https://www.jeremelentzphotography.com/">Photographer</a>,
-          and small business{" "}
+          I am a freelance Web Developer and small business{" "}
           <a href="https://www.jlentzconsulting.com">Consultant</a> based out of
-          Egg Harbor City, New Jersey.
+          Egg Harbor City, New Jersey. I also take pictures sometimes which can
+          be <a href="https://www.jeremelentzphotography.com">seen here</a>.
         </p>
         <p>
-          Reach out and follow me on{" "}
+          Reach out to me and follow along on{" "}
           <a href="https://www.instagram.com/jeremel/">Instagram</a>,{" "}
           <a href="https://twitter.com/jereme_l">Twitter</a>, or{" "}
           <a href="https://www.linkedin.com/in/jereme-lentz-03560ab6/">
