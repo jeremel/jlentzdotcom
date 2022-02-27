@@ -75,25 +75,30 @@ export default function Blog() {
       </Header>
       <BlogPosts>
         {postData &&
-          postData.map((post, index) => (
-            <Link
-              href={"/blog/" + post.slug.current}
-              passHref
-              key={post.slug.current}
-            >
-              <a>
-                <span key={index}>
-                  <h3>{post.title}</h3>
-                  <Image
-                    src={post.mainImage.asset.url}
-                    alt={post.mainImage.alt}
-                    height={400}
-                    width={600}
-                  />
-                </span>
-              </a>
-            </Link>
-          ))}
+          postData.map(
+            (post, index) => (
+              console.log(post.slug.current),
+              (
+                <Link
+                  href={"/blog/" + post.slug.current}
+                  passHref
+                  key={post.slug.current}
+                >
+                  <a>
+                    <span key={index}>
+                      <h3>{post.title}</h3>
+                      <Image
+                        src={post.mainImage.asset.url}
+                        alt={post.mainImage.alt}
+                        height={400}
+                        width={600}
+                      />
+                    </span>
+                  </a>
+                </Link>
+              )
+            )
+          )}
       </BlogPosts>
     </Container>
   );
