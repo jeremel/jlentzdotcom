@@ -39,7 +39,7 @@ const Main = styled.main`
   }
 
   .services h2 {
-    font-size: 5.5rem;
+    font-size: 5rem;
     padding: 0 0 2rem 0;
     margin: 0;
     font-weight: 400;

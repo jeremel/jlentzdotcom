@@ -7,6 +7,7 @@ const Container = styled.nav`
   justify-content: flex-end;
   align-items: center;
   padding: 0.5rem 2rem;
+  border-bottom: 4px solid #185418;
 
   h1 {
     margin: 0;
