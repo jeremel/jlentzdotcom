@@ -120,16 +120,6 @@ export default function Home() {
           >
             <a href="https://www.jlentzconsulting.com">Consulting</a>
           </motion.h2>
-          <motion.h2
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 3.5, duration: 0.25 }}
-            id="services"
-          >
-            <Link href="/blog">
-              <a>Blog</a>
-            </Link>
-          </motion.h2>
         </div>
       </Main>
 
