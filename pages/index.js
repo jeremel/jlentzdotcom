@@ -33,6 +33,7 @@ const Main = styled.main`
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    text-align: right;
     position: relative;
     z-index: 1;
   }
