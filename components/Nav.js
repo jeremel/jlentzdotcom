@@ -11,8 +11,12 @@ const Container = styled.nav`
 
   h1 {
     margin: 0;
-    font-size: 8rem;
+    font-size: clamp(4rem, 1.8462rem + 9.8462vw, 8rem);
     font-weight: 400;
+  }
+
+  @media (max-width: 1000px) {
+    justify-content: center;
   }
 `;
 

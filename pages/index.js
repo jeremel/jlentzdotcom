@@ -7,56 +7,98 @@ import { motion } from "framer-motion";
 
 const Container = styled.div`
   padding: 0 2rem;
+
+  @media (max-width: 1000px) {
+    padding: 0 1rem;
+  }
 `;
 
 const Main = styled.main`
   padding: 1rem 0;
   display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 
   .imageStyle {
     position: relative;
 
-    width: 50%;
+    max-width: 45%;
     margin: 1rem 0;
     padding: 0;
     z-index: 0;
 
     img {
-      border-radius: 10px;
-      /* background: #185418; */
+      border-radius: 8px;
+    }
+
+    @media (max-width: 1000px) {
+      margin: 1rem auto;
+      max-width: 95%;
     }
   }
 
   .services {
-    width: 50%;
+    max-width: 55%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-end;
     text-align: right;
     position: relative;
     z-index: 1;
+
+    h2 {
+      font-size: 5rem;
+      padding: 0;
+      margin: 0 0 1rem 0;
+      font-weight: 400;
+      transition: all 600ms;
+
+      &:hover,
+      :focus {
+        color: #288d28;
+        text-decoration: underline;
+        text-underline-offset: -1px;
+        text-decoration-thickness: 7%;
+        font-weight: 600;
+      }
+
+      &:last-child {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    @media (max-width: 1250px) {
+      h2 {
+        font-size: 4.5rem;
+      }
+    }
+
+    @media (max-width: 1125px) {
+      h2 {
+        font-size: clamp(2rem, 0.9231rem + 4.9231vw, 4rem);
+      }
+    }
+
+    @media (max-width: 1000px) {
+      max-width: 95%;
+      align-items: center;
+      text-align: center;
+
+      h2 {
+        font-weight: 500;
+      }
+    }
   }
 
-  .services h2 {
-    font-size: 5rem;
-    padding: 0 0 2rem 0;
-    margin: 0;
-    font-weight: 400;
-    transition: all 600ms;
-  }
-
-  .services h2:hover {
-    color: #288d28;
-    text-decoration: underline;
-    text-underline-offset: -1px;
-    text-decoration-thickness: 7%;
-    font-weight: 600;
+  @media (max-width: 1000px) {
+    flex-direction: column;
   }
 `;
 
 const About = styled.section`
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 0.6923rem + 3.6923vw, 3rem);
 
   p {
     margin: 2rem 0 1.5rem 0;
@@ -72,6 +114,20 @@ const About = styled.section`
     color: #185418;
     text-decoration: underline;
   }
+
+  @media (max-width: 1000px) {
+    max-width: 95%;
+    margin: 0 auto;
+
+    p {
+      padding: 0;
+      margin: 0;
+
+      &:first-child {
+        margin-bottom: 1rem;
+      }
+    }
+  }
 `;
 
 export default function Home() {
@@ -80,7 +136,7 @@ export default function Home() {
       <Head>
         <title>Jereme Lentz</title>
         <meta name="description" content="Jereme Lentz" />
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
       <Main>
@@ -127,15 +183,54 @@ export default function Home() {
       <About>
         <p>
           I am a freelance Web Developer and small business{" "}
-          <a href="https://www.jlentzconsulting.com">Consultant</a> based out of
-          Egg Harbor City, New Jersey. I also take pictures sometimes which can
-          be <a href="https://www.jeremelentzphotography.com">seen here</a>.
+          <a
+            href="https://www.jlentzconsulting.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Consultant
+          </a>{" "}
+          based out of{" "}
+          <a
+            href="https://en.wikipedia.org/wiki/South_Jersey"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Southern New Jersey
+          </a>
+          . I also take pictures sometimes which can be{" "}
+          <a
+            href="https://www.jeremelentzphotography.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            seen here
+          </a>
+          .
         </p>
         <p>
           Reach out to me and follow along on{" "}
-          <a href="https://www.instagram.com/jeremel/">Instagram</a>,{" "}
-          <a href="https://twitter.com/jereme_l">Twitter</a>, or{" "}
-          <a href="https://www.linkedin.com/in/jereme-lentz-03560ab6/">
+          <a
+            href="https://www.instagram.com/jeremel/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Instagram
+          </a>
+          ,{" "}
+          <a
+            href="https://twitter.com/jereme_l"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Twitter
+          </a>
+          , or{" "}
+          <a
+            href="https://www.linkedin.com/in/jereme-lentz-03560ab6/"
+            target="_blank"
+            rel="noreferrer"
+          >
             LinkedIn
           </a>
           . Or go the old fashioned way and send me an email at{" "}

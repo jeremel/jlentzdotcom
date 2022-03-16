@@ -8,7 +8,7 @@ const Container = styled.footer`
   justify-content: center;
 
   p {
-    font-size: 1.75rem;
+    font-size: clamp(1.25rem, 0.9808rem + 1.2308vw, 1.75rem);
     margin: 1rem;
   }
 `;
