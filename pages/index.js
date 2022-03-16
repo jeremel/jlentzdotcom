@@ -149,6 +149,7 @@ export default function Home() {
             src={Jereme}
             alt="Jereme Lentz - the man himself"
             placeholder="blur"
+            title="Click me!"
           />
         </motion.div>
 
